@@ -16,6 +16,6 @@ Proyek ini juga menyertakan simulasi berbasis SLA menggunakan OpenStack. Simulas
 Hasil evaluasi tiap classifier disimpan dalam folder <b>results/</b> dalam format teks langsung dari output RMSE pada WEKA.
 | Algoritma                        | 50% Testing | 35% Testing | 15% Testing | 5% Testing |
 |----------------------------------|-------------|-------------|-------------|------------|
-| Decision Tree Classifier         | 0,0022 | 0,002  | 0,0019 | 0,0018 |
-| Randomizable Filtered Classifier | 0,0046 | 0,0047 | 0,0038 | 0,0035 |
-| K-Star                           | 0,0046 | 0,0047 | 0,0038 | 0,0035 |
+| Decision Tree Classifier         | 0,5065 | 0,5314 | 0,546  | 0,5408 |
+| Randomizable Filtered Classifier | 0,5494 | 0,5678 | 0,5663 | 0,5732 |
+| K-Star                           | 0,4853 | 0,5007 | 0,5183 | 0,5413 |
