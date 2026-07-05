@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.RandomizableFilteredClassifier -F "weka.filters.unsupervised.attribute.RandomProjection -N 10 -R 42 -D Sparse1" -S 1 -W weka.classifiers.lazy.IBk -- -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     cloud_risk
+Instances:    1940
+Attributes:   19
+              RC
+              IP
+              IAS
+              DS
+              TPM
+              RE
+              DB
+              DI
+              DT
+              DL
+              DLIS
+              SLA
+              AAC
+              IDD
+              BCSA
+              R
+              ShE
+              VV
+              risk_label
+Test mode:    split 5.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomizableFilteredClassifier using weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" on data filtered through weka.filters.unsupervised.attribute.RandomProjection -N 10 -R -811312851 -D Sparse1
+
+Filtered Header
+@relation cloud_risk-weka.filters.supervised.attribute.NominalToBinary-weka.filters.unsupervised.attribute.RandomProjection-N10-R-811312851-DSparse1
+
+@attribute K1 numeric
+@attribute K2 numeric
+@attribute K3 numeric
+@attribute K4 numeric
+@attribute K5 numeric
+@attribute K6 numeric
+@attribute K7 numeric
+@attribute K8 numeric
+@attribute K9 numeric
+@attribute K10 numeric
+@attribute risk_label {low,medium,high,very_high}
+
+@data
+
+
+Classifier Model
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.03 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         583               31.6332 %
+Incorrectly Classified Instances      1260               68.3668 %
+Kappa statistic                          0.0892
+Mean absolute error                      0.3431
+Root mean squared error                  0.5732
+Relative absolute error                 91.4269 %
+Root relative squared error            131.2371 %
+Total Number of Instances             1843     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,308    0,165    0,388      0,308    0,344      0,156    0,572     0,295     low
+                 0,258    0,253    0,254      0,258    0,256      0,006    0,503     0,251     medium
+                 0,381    0,314    0,282      0,381    0,324      0,061    0,533     0,259     high
+                 0,320    0,179    0,375      0,320    0,345      0,149    0,570     0,291     very_high
+Weighted Avg.    0,316    0,227    0,325      0,316    0,317      0,093    0,545     0,274     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 144 143 123  57 |   a = low
+ 111 119 148  83 |   b = medium
+  68 105 172 107 |   c = high
+  48 101 166 148 |   d = very_high
+

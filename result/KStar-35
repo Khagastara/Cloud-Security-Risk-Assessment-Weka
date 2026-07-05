@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.KStar -B 20 -M a
+Relation:     cloud_risk
+Instances:    1940
+Attributes:   19
+              RC
+              IP
+              IAS
+              DS
+              TPM
+              RE
+              DB
+              DI
+              DT
+              DL
+              DLIS
+              SLA
+              AAC
+              IDD
+              BCSA
+              R
+              ShE
+              VV
+              risk_label
+Test mode:    split 35.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+KStar Beta Verion (0.1b).
+Copyright (c) 1995-97 by Len Trigg (trigg@cs.waikato.ac.nz).
+Java port to Weka by Abdelaziz Mahoui (am14@cs.waikato.ac.nz).
+
+KStar options : -B 20 -M a 
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 9.48 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         532               42.1887 %
+Incorrectly Classified Instances       729               57.8113 %
+Kappa statistic                          0.2297
+Mean absolute error                      0.2904
+Root mean squared error                  0.5007
+Relative absolute error                 77.3851 %
+Root relative squared error            115.5099 %
+Total Number of Instances             1261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,502    0,137    0,562      0,502    0,530      0,379    0,794     0,562     low
+                 0,293    0,237    0,288      0,293    0,290      0,055    0,593     0,300     medium
+                 0,334    0,262    0,287      0,334    0,309      0,069    0,561     0,280     high
+                 0,548    0,133    0,585      0,548    0,566      0,424    0,811     0,584     very_high
+Weighted Avg.    0,422    0,190    0,434      0,422    0,427      0,236    0,693     0,435     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 164 101  54   8 |   a = low
+  86  91  91  43 |   b = medium
+  37  90 101  74 |   c = high
+   5  34 106 176 |   d = very_high
+
